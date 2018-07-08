@@ -28,3 +28,19 @@ html{
 .container-main{
   height: 100vh;
 }
+
+@mixin dynamic-button ($bgColor, $fontColor){
+  background-color: $bgColor;
+  color: $fontColor;
+  border-radius: 2px;
+  padding: 5px 10px;
+  margin: 0 10px;
+  border: none;
+  &:hover{
+    cursor: pointer;
+    transform: scale(.95);
+  }
+  &:focus{
+    outline: none;
+  }
+}

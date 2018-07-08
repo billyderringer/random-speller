@@ -17,11 +17,50 @@ html {
   height: 100vh; }
 
 #container-content {
-  height: 65vh; }
-  #container-content i {
-    font-size: 1.5em; }
-    #container-content i:hover {
-      cursor: pointer;
-      transform: scale(1.1); }
+  height: 65vh;
+  flex-direction: column; }
+  #container-content #container-speaker {
+    flex-direction: column;
+    background-color: #00ffff;
+    width: 200px;
+    height: 200px; }
+    #container-content #container-speaker i {
+      color: #404040;
+      font-size: 2em; }
+      #container-content #container-speaker i:hover {
+        cursor: pointer;
+        transform: scale(1.1); }
+    #container-content #container-speaker p {
+      position: absolute;
+      bottom: 0;
+      margin: 0 auto; }
+  #container-content #word-options {
+    margin-top: 20px; }
+    #container-content #word-options .word-button {
+      background-color: #00ffff;
+      color: #404040;
+      border-radius: 2px;
+      padding: 5px 10px;
+      margin: 0 10px;
+      border: none; }
+      #container-content #word-options .word-button:hover {
+        cursor: pointer;
+        transform: scale(0.95); }
+      #container-content #word-options .word-button:focus {
+        outline: none; }
+  #container-content #container-options {
+    margin-top: 20px; }
+    #container-content #container-options .submit-button {
+      background-color: #404040;
+      color: #fff;
+      border-radius: 2px;
+      padding: 5px 10px;
+      margin: 0 10px;
+      border: none; }
+      #container-content #container-options .submit-button:hover {
+        cursor: pointer;
+        transform: scale(0.95); }
+      #container-content #container-options .submit-button:focus {
+        outline: none; }
 
 /*# sourceMappingURL=Content.css.map */

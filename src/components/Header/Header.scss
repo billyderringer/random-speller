@@ -10,17 +10,9 @@ nav{
   #menu{
     height: 10vh;
     background-color: $dark-grey;
-    .difficulty-button{
-      background-color: $green;
-      color: $dark-grey;
-      border-radius: 5px;
-      padding: 5px 10px;
-      margin: 0 10px;
-      border: none;
-      &:hover{
-        cursor: pointer;
-        transform: scale(.95);
-      }
-    }
+  }
+
+  .difficulty-button{
+    @include dynamic-button($green, $dark-grey)
   }
 }

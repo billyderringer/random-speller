@@ -23,15 +23,17 @@ nav #banner {
 nav #menu {
   height: 10vh;
   background-color: #404040; }
-  nav #menu .difficulty-button {
-    background-color: #00ffff;
-    color: #404040;
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin: 0 10px;
-    border: none; }
-    nav #menu .difficulty-button:hover {
-      cursor: pointer;
-      transform: scale(0.95); }
+nav .difficulty-button {
+  background-color: #00ffff;
+  color: #404040;
+  border-radius: 2px;
+  padding: 5px 10px;
+  margin: 0 10px;
+  border: none; }
+  nav .difficulty-button:hover {
+    cursor: pointer;
+    transform: scale(0.95); }
+  nav .difficulty-button:focus {
+    outline: none; }
 
 /*# sourceMappingURL=Header.css.map */

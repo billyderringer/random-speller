@@ -2,12 +2,38 @@
 
 #container-content{
   height: 65vh;
-  i{
-    font-size: 1.5em;
-    &:hover{
-      cursor: pointer;
-      transform: scale(1.1);
+  flex-direction: column;
+  #container-speaker{
+    flex-direction: column;
+    background-color: $green;
+    width: 200px;
+    height: 200px;
+    i{
+      color: $dark-grey;
+      font-size: 2em;
+      &:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    }
+    p{
+      position: absolute;
+      bottom: 0;
+      margin: 0 auto;
     }
   }
 
+  #word-options{
+    margin-top: 20px;
+    .word-button{
+      @include dynamic-button($green, $dark-grey)
+    }
+  }
+
+  #container-options{
+    margin-top: 20px;
+    .submit-button{
+      @include dynamic-button($dark-grey, $white)
+    }
+  }
 }
