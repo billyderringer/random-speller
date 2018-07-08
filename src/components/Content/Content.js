@@ -15,7 +15,7 @@ class Content  extends Component {
                     <i id="word-clicker"
                        onClick={() => {
                            window.responsiveVoice.speak(this.props.word,
-                               "US English Female")
+                               "US English Female", {rate: .8})
                        }}
                        className="fas fa-volume-up" />
                     <p>Click to hear the word</p>

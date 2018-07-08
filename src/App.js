@@ -5,7 +5,7 @@ import Content from "./components/Content/Content";
 import Footer from "./components/Footer";
 
 //**used to override responsive voice api logs
-console.log = function() {}
+//console.log = function() {}
 
 class App extends Component {
     constructor(props) {
