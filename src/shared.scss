@@ -1,0 +1,30 @@
+$dark-grey: #404040;
+$white: #fff;
+$orange: #ff6600;
+$green: #00ffff;
+
+
+//settings/resets
+html,body,div,h1,h2,h3,h4,h5,h6,p{
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+html{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+//utilities
+.center-all-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-main{
+  height: 100vh;
+}
