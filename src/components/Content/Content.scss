@@ -5,11 +5,11 @@
   flex-direction: column;
   #container-speaker{
     flex-direction: column;
-    background-color: $green;
+    background-color: $dark-grey;
     width: 200px;
     height: 200px;
     i{
-      color: $dark-grey;
+      color: $green;
       font-size: 2em;
       &:hover{
         cursor: pointer;
@@ -26,7 +26,7 @@
   #word-options{
     margin-top: 20px;
     .word-button{
-      @include dynamic-button($green, $dark-grey)
+      @include dynamic-button($dark-grey, $green)
     }
   }
 

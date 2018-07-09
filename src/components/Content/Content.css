@@ -21,11 +21,11 @@ html {
   flex-direction: column; }
   #container-content #container-speaker {
     flex-direction: column;
-    background-color: #00ffff;
+    background-color: #404040;
     width: 200px;
     height: 200px; }
     #container-content #container-speaker i {
-      color: #404040;
+      color: #00ffff;
       font-size: 2em; }
       #container-content #container-speaker i:hover {
         cursor: pointer;
@@ -37,8 +37,8 @@ html {
   #container-content #word-options {
     margin-top: 20px; }
     #container-content #word-options .word-button {
-      background-color: #00ffff;
-      color: #404040;
+      background-color: #404040;
+      color: #00ffff;
       border-radius: 2px;
       padding: 5px 10px;
       margin: 0 10px;

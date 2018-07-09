@@ -12,15 +12,17 @@ class Content  extends Component {
                      className="center-all-flex">
                 <div id="container-speaker"
                      className="center-all-flex">
+
+                    {/*Send word to responsive voice*/}
                     <i id="word-clicker"
                        onClick={() => {
                            window.responsiveVoice.speak(this.props.word,
-                               "US English Female", {rate: .8})
+                               "US English Female", {rate: .77})
                        }}
                        className="fas fa-volume-up" />
                     <p>Click to hear the word</p>
                 </div>
-                <WordOptions clue={this.props.clue}/>
+                <WordOptions definition={this.props.definition}/>
 
                 <Input />
             </section>

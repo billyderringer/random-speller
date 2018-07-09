@@ -1,0 +1,64 @@
+html, body, div, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+html {
+  font-family: Arial, Helvetica, sans-serif; }
+
+.center-all-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.container-main {
+  height: 100vh; }
+
+.loader {
+  height: 100vh;
+  flex-direction: column;
+  background-color: #404040; }
+  .loader .eye {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 30px 0px 0px 0px #fff;
+    position: relative; }
+  .loader .eye:after {
+    background-color: #404040;
+    width: 10px;
+    height: 10px;
+    box-shadow: 30px 0px 0px 0px #404040;
+    border-radius: 50%;
+    left: 9px;
+    top: 8px;
+    position: absolute;
+    content: "";
+    -webkit-animation: eyeball 2s linear infinite alternate;
+    -moz-animation: eyeball 2s linear infinite alternate;
+    animation: eyeball 2s linear infinite alternate; }
+@-webkit-keyframes eyeball {
+  0% {
+    left: 9px; }
+  100% {
+    left: 1px; } }
+@-moz-keyframes eyeball {
+  0% {
+    left: 9px; }
+  100% {
+    left: 1px; } }
+@keyframes eyeball {
+  0% {
+    left: 9px; }
+  100% {
+    left: 1px; } }
+  .loader p {
+    color: #00ffff;
+    margin-top: 20px;
+    text-align: center; }
+
+/*# sourceMappingURL=Loader.css.map */

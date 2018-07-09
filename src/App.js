@@ -3,6 +3,7 @@ import axios from 'axios'
 import Header from "./components/Header";
 import Content from "./components/Content/Content";
 import Footer from "./components/Footer";
+import Loader from "./components/Loader";
 
 //**used to override responsive voice api logs
 //console.log = function() {}
@@ -12,7 +13,7 @@ class App extends Component {
         super(props);
         this.state= {
             word: "",
-            clue: "I'm a clue"
+            definition: ""
         }
 
         this.getNewWord = this.getNewWord.bind(this)
@@ -22,6 +23,8 @@ class App extends Component {
         this.getNewWord()
     }
 
+    //Get random word from words api
+    //sent to Content component for voice
     getNewWord = () => {
         axios({
             method: 'get',
@@ -31,7 +34,13 @@ class App extends Component {
                 "X-Mashape-Host": "wordsapiv1.p.mashape.com"
             }
         }).then((res) => {
-            this.setState({word: res.data.word})
+            //only get word with definitions
+            res.data.results ?
+            this.setState({
+                word: res.data.word,
+                definition: res.data.results[0].definition
+            }): this.getNewWord()
+
         }).catch(err => {
             console.log(err)
         })
@@ -39,14 +48,23 @@ class App extends Component {
 
     render() {
     return (
-      <div className="App">
-          <Header />
-          <Content word={this.state.word}
-                   clue={this.state.clue}/>
-          <Footer />
-      </div>
-    )
+        <div className="App">
+            {this.state.word ?
+                <div>
+                    <Header />
+                    <Content word={this.state.word}
+                             definition={this.state.definition}/>
+                    {console.log(this.state.definition)}
+                    <Footer/>
+                </div>
+             : <Loader />
+            }
+        </div>)
   }
 }
+
+/*let test = this.state.data.results[0].definition !== undefined ?
+    this.state.data.results[0].definition :
+    "No definition available"*/
 
 export default App

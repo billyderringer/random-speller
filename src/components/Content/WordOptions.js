@@ -9,10 +9,13 @@ class WordOptions extends Component{
             <div id="word-options">
                 <button className="word-button"
                         onClick={() => {
-                            window.responsiveVoice.speak(this.props.clue,
-                                "US English Female")
+                            window.responsiveVoice.speak(this.props.definition,
+                                "US English Female", {rate: .77})
                         }}>
-                    Get A Clue
+                    Definition
+                </button>
+                <button className="word-button">
+                    Show Word
                 </button>
                 <button className="word-button">
                     New Word
