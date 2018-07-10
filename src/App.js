@@ -7,7 +7,7 @@ import Loader from "./components/Loader"
 require('dotenv').config()
 
 //**used to override responsive voice api logs
-//console.log = function() {}
+console.log = function() {}
 
 class App extends Component {
     constructor(props) {
@@ -16,23 +16,22 @@ class App extends Component {
             word: "",
             definition: "",
             rate: .77,
-            voice: "US English Woman"
+            voice: "US English Female"
         }
 
+        this.fetchData = this.fetchData.bind(this)
         this.getNewWord = this.getNewWord.bind(this)
     }
 
     componentWillMount(){
-        this.getNewWord()
+        this.fetchData()
     }
 
-    //Get random word from words api
-    //sent to Content component for voice
-    getNewWord() {
-        console.log(process.env)
+    //get random word from words api
+    fetchData(){
         axios({
             method: 'get',
-            url:'https://wordsapiv1.p.mashape.com/words/?random=true&letterpattern=/^\\S*$/',
+            url:'https://wordsapiv1.p.mashape.com/words/?random=true&hasDetails=definitions&letterPattern=^\\S*$',
             headers: {
                 "X-Mashape-Key": process.env.REACT_APP_X_MASHAPE_KEY,
                 "X-Mashape-Host": "wordsapiv1.p.mashape.com"
@@ -40,14 +39,21 @@ class App extends Component {
         }).then((res) => {
             //only get word with definitions
             res.data.results ?
-            this.setState({
-                word: res.data.word,
-                definition: res.data.results[0].definition
-            }): this.getNewWord()
-
+                this.setState({
+                    word: res.data.word,
+                    definition: res.data.results[0].definition
+                }): this.fetchData()
         }).catch(err => {
             console.log(err)
         })
+    }
+
+    getNewWord() {
+        this.setState({
+            word: '',
+            definition: ''
+        })
+        this.fetchData()
     }
 
     render() {

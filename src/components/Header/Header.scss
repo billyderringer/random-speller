@@ -1,18 +1,16 @@
 @import "../../shared";
 
-nav{
-  #banner{
-    height: 15vh;
-    background-color: $orange;
-    color: $white;
-  }
+#banner{
+  height: 15vh;
+  background-color: $orange;
+  color: $white;
+}
 
-  #menu{
-    height: 10vh;
-    background-color: $dark-grey;
-  }
+#menu{
+  height: 10vh;
+  background-color: $dark-grey;
+}
 
-  .difficulty-button{
-    @include dynamic-button($green, $dark-grey)
-  }
+.difficulty-button{
+  @include dynamic-button($green, $dark-grey)
 }

@@ -26,10 +26,6 @@ html{
   align-items: center;
 }
 
-.container-main{
-  height: 100vh;
-}
-
 @mixin dynamic-button ($bgColor, $fontColor){
   background-color: $bgColor;
   color: $fontColor;

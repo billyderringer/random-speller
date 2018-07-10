@@ -13,63 +13,61 @@ html {
   justify-content: center;
   align-items: center; }
 
-.container-main {
-  height: 100vh; }
-
-#container-content {
+.container-main #word-options {
+  height: 10vh;
+  background-color: #404040; }
+  .container-main #word-options .word-button {
+    background-color: #00ffff;
+    color: #404040;
+    border-radius: 2px;
+    padding: 5px 10px;
+    margin: 0 10px;
+    border: none; }
+    .container-main #word-options .word-button:hover {
+      cursor: pointer;
+      transform: scale(0.95); }
+    .container-main #word-options .word-button:focus {
+      outline: none; }
+.container-main #container-content {
   height: 65vh;
   flex-direction: column; }
-  #container-content #container-speaker {
+  .container-main #container-content #container-speaker {
     flex-direction: column;
     background-color: #404040;
     width: 200px;
     height: 200px; }
-    #container-content #container-speaker i {
+    .container-main #container-content #container-speaker i {
       color: #00ffff;
       font-size: 2em; }
-      #container-content #container-speaker i:hover {
+      .container-main #container-content #container-speaker i:hover {
         cursor: pointer;
         transform: scale(1.1); }
-    #container-content #container-speaker p {
+    .container-main #container-content #container-speaker p {
       text-align: center;
       margin-top: 30px;
       padding: 0 10px;
       font-size: .8em; }
-    #container-content #container-speaker #instruction-intro {
+    .container-main #container-content #container-speaker #instruction-intro {
       color: #fff; }
-    #container-content #container-speaker #guess-correct {
+    .container-main #container-content #container-speaker #guess-correct {
       color: #00ffff; }
-    #container-content #container-speaker #guess-incorrect {
+    .container-main #container-content #container-speaker #guess-incorrect {
       color: #ff0000; }
-  #container-content #word-options {
+  .container-main #container-content #container-options {
     margin-top: 20px; }
-    #container-content #word-options .word-button {
-      background-color: #404040;
-      color: #00ffff;
-      border-radius: 2px;
-      padding: 5px 10px;
-      margin: 0 10px;
-      border: none; }
-      #container-content #word-options .word-button:hover {
-        cursor: pointer;
-        transform: scale(0.95); }
-      #container-content #word-options .word-button:focus {
-        outline: none; }
-  #container-content #container-options {
-    margin-top: 20px; }
-    #container-content #container-options input {
+    .container-main #container-content #container-options input {
       padding: 3px; }
-    #container-content #container-options .submit-button {
+    .container-main #container-content #container-options .submit-button {
       background-color: #404040;
       color: #fff;
       border-radius: 2px;
       padding: 5px 10px;
       margin: 0 10px;
       border: none; }
-      #container-content #container-options .submit-button:hover {
+      .container-main #container-content #container-options .submit-button:hover {
         cursor: pointer;
         transform: scale(0.95); }
-      #container-content #container-options .submit-button:focus {
+      .container-main #container-content #container-options .submit-button:focus {
         outline: none; }
 
 /*# sourceMappingURL=Content.css.map */

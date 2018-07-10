@@ -6,7 +6,8 @@ class WordOptions extends Component{
 
     render(){
         return(
-            <div id="word-options">
+            <div className="center-all-flex"
+                 id="word-options">
                 <button className="word-button"
                         onClick={() => {
                             window.responsiveVoice.speak(this.props.definition,
@@ -14,7 +15,8 @@ class WordOptions extends Component{
                         }}>
                     Definition
                 </button>
-                <button className="word-button">
+                <button className="word-button"
+                        onClick={this.props.setShowWord}>
                     Show Word
                 </button>
                 <button className="word-button"

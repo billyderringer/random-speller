@@ -13,27 +13,26 @@ html {
   justify-content: center;
   align-items: center; }
 
-.container-main {
-  height: 100vh; }
-
-nav #banner {
+#banner {
   height: 15vh;
   background-color: #ff6600;
   color: #fff; }
-nav #menu {
+
+#menu {
   height: 10vh;
   background-color: #404040; }
-nav .difficulty-button {
+
+.difficulty-button {
   background-color: #00ffff;
   color: #404040;
   border-radius: 2px;
   padding: 5px 10px;
   margin: 0 10px;
   border: none; }
-  nav .difficulty-button:hover {
+  .difficulty-button:hover {
     cursor: pointer;
     transform: scale(0.95); }
-  nav .difficulty-button:focus {
+  .difficulty-button:focus {
     outline: none; }
 
 /*# sourceMappingURL=Header.css.map */

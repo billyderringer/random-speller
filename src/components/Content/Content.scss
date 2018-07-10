@@ -1,53 +1,55 @@
 @import "../../shared";
 
-#container-content{
-  height: 65vh;
-  flex-direction: column;
-  #container-speaker{
-    flex-direction: column;
+.container-main{
+  #word-options{
+    height: 10vh;
     background-color: $dark-grey;
-    width: 200px;
-    height: 200px;
-    i{
-      color: $green;
-      font-size: 2em;
-      &:hover{
-        cursor: pointer;
-        transform: scale(1.1);
+    .word-button{
+      @include dynamic-button($green, $dark-grey)
+    }
+  }
+  #container-content{
+    height: 65vh;
+    flex-direction: column;
+    #container-speaker{
+      flex-direction: column;
+      background-color: $dark-grey;
+      width: 200px;
+      height: 200px;
+      i{
+        color: $green;
+        font-size: 2em;
+        &:hover{
+          cursor: pointer;
+          transform: scale(1.1);
+        }
+      }
+      p{
+        text-align: center;
+        margin-top: 30px;
+        padding: 0 10px;
+        font-size: .8em;
+      }
+      #instruction-intro{
+        color: $white;
+      }
+      #guess-correct{
+        color: $green;
+      }
+
+      #guess-incorrect{
+        color: $red;
       }
     }
-    p{
-      text-align: center;
-      margin-top: 30px;
-      padding: 0 10px;
-      font-size: .8em;
-    }
-    #instruction-intro{
-      color: $white;
-    }
-    #guess-correct{
-      color: $green;
-    }
 
-    #guess-incorrect{
-      color: $red;
-    }
-  }
-
-  #word-options{
-    margin-top: 20px;
-    .word-button{
-      @include dynamic-button($dark-grey, $green)
-    }
-  }
-
-  #container-options{
-    margin-top: 20px;
-    input{
-      padding: 3px;
-    }
-    .submit-button{
-      @include dynamic-button($dark-grey, $white)
+    #container-options{
+      margin-top: 20px;
+      input{
+        padding: 3px;
+      }
+      .submit-button{
+        @include dynamic-button($dark-grey, $white)
+      }
     }
   }
 }

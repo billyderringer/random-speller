@@ -11,6 +11,7 @@ class Content extends Component {
         }
         this.containerResponse = this.containerResponse.bind(this)
         this.getSpellingGuess = this.getSpellingGuess.bind(this)
+        this.setShowWord = this.setShowWord.bind(this)
     }
 
     containerResponse() {
@@ -26,7 +27,19 @@ class Content extends Component {
             window.responsiveVoice.speak("Incorrect, please try again",
                 this.props.voice, {rate: this.props.rate})
             return <p id="guess-incorrect">Incorrect. Please try again.</p>
+        }else if(this.state.guessCorrect === "show"){
+            const word = this.props.word.charAt(0).toUpperCase() +
+                this.props.word.substr(1)
+            window.responsiveVoice.speak(this.props.word + ". Click new word.",
+                this.props.voice, {rate: this.props.rate})
+            return <p id="guess-incorrect">{word}</p>
         }
+    }
+
+    setShowWord(){
+        this.setState({
+            guessCorrect: "show"
+        })
     }
 
     getSpellingGuess(result) {
@@ -38,27 +51,34 @@ class Content extends Component {
     render(){
 
         return(
-            <section id="container-content"
-                     className="center-all-flex">
-                <div id="container-speaker"
-                     className="center-all-flex">
+            <div className="container-main">
 
-                    {/*Send word to responsive voice*/}
-                    <i id="word-clicker"
-                       onClick={() => {
-                           window.responsiveVoice.speak(this.props.word,
-                               this.props.voice, {rate: this.props.rate})
-                       }}
-                       className="fas fa-volume-up" />
-                    {this.containerResponse()}
-                </div>
                 <WordOptions definition={this.props.definition}
-                             getNewWord={this.props.getNewWord}/>
+                                                         setShowWord={this.setShowWord}
+                                                         containerResponse={this.containerResponse}
+                                                         getNewWord={this.props.getNewWord}/>
 
-                <Input getSpellingGuess={this.getSpellingGuess}
-                       word={this.props.word}
-                       containerResponse={this.containerResponse} />
-            </section>
+                <section id="container-content"
+                         className="center-all-flex">
+
+                    <div id="container-speaker"
+                         className="center-all-flex">
+
+                        {/*Send word to responsive voice*/}
+                        <i id="word-clicker"
+                           onClick={() => {
+                               window.responsiveVoice.speak(this.props.word,
+                                   this.props.voice, {rate: this.props.rate})
+                           }}
+                           className="fas fa-volume-up" />
+                        {this.containerResponse()}
+                    </div>
+
+                    <Input getSpellingGuess={this.getSpellingGuess}
+                           word={this.props.word}
+                           containerResponse={this.containerResponse} />
+                </section>
+            </div>
         )
     }
 }
