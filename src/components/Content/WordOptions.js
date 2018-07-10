@@ -17,7 +17,8 @@ class WordOptions extends Component{
                 <button className="word-button">
                     Show Word
                 </button>
-                <button className="word-button">
+                <button className="word-button"
+                        onClick={this.props.getNewWord}>
                     New Word
                 </button>
             </div>

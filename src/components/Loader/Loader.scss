@@ -11,7 +11,7 @@
     margin-right: 20px;
     background-color: $white;
     border-radius: 50%;
-    box-shadow: 30px 0px 0px 0px $white;
+    box-shadow: 30px 0 0 0 $white;
     position: relative;
   }
 
@@ -19,7 +19,7 @@
     background-color: $dark-grey;
     width: 10px;
     height: 10px;
-    box-shadow: 30px 0px 0px 0px $dark-grey;
+    box-shadow: 30px 0 0 0 $dark-grey;
     border-radius: 50%;
     left: 9px;
     top: 8px;

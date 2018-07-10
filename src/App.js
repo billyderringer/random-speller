@@ -13,7 +13,9 @@ class App extends Component {
         super(props);
         this.state= {
             word: "",
-            definition: ""
+            definition: "",
+            rate: .77,
+            voice: "US English Woman"
         }
 
         this.getNewWord = this.getNewWord.bind(this)
@@ -25,10 +27,10 @@ class App extends Component {
 
     //Get random word from words api
     //sent to Content component for voice
-    getNewWord = () => {
+    getNewWord() {
         axios({
             method: 'get',
-            url:'https://wordsapiv1.p.mashape.com/words/?random=true&letters=6&letterpattern=^[A-z]+$',
+            url:'https://wordsapiv1.p.mashape.com/words/?random=true&letterpattern=/^\\S*$/',
             headers: {
                 "X-Mashape-Key": "lS563P9svKmshFblGwDm0QmxMQiip16Cf3yjsnwebKjRFbSiM3",
                 "X-Mashape-Host": "wordsapiv1.p.mashape.com"
@@ -53,8 +55,10 @@ class App extends Component {
                 <div>
                     <Header />
                     <Content word={this.state.word}
-                             definition={this.state.definition}/>
-                    {console.log(this.state.definition)}
+                             definition={this.state.definition}
+                             getNewWord={this.getNewWord}
+                             rate={this.state.rate}
+                             voice={this.state.voice}/>
                     <Footer/>
                 </div>
              : <Loader />
@@ -62,9 +66,5 @@ class App extends Component {
         </div>)
   }
 }
-
-/*let test = this.state.data.results[0].definition !== undefined ?
-    this.state.data.results[0].definition :
-    "No definition available"*/
 
 export default App

@@ -17,9 +17,20 @@
       }
     }
     p{
-      position: absolute;
-      bottom: 0;
-      margin: 0 auto;
+      text-align: center;
+      margin-top: 30px;
+      padding: 0 10px;
+      font-size: .8em;
+    }
+    #instruction-intro{
+      color: $white;
+    }
+    #guess-correct{
+      color: $green;
+    }
+
+    #guess-incorrect{
+      color: $red;
     }
   }
 
@@ -32,6 +43,9 @@
 
   #container-options{
     margin-top: 20px;
+    input{
+      padding: 3px;
+    }
     .submit-button{
       @include dynamic-button($dark-grey, $white)
     }
