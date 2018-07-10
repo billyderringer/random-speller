@@ -17,8 +17,8 @@ class Input extends Component{
 
     handleSubmit(event) {
         event.preventDefault()
-        let guess = this.state.value.ignoreCase ===
-        this.props.word.ignoreCase
+        let guess = this.state.value.toLowerCase() ===
+        this.props.word.toLowerCase()
 
         //passed from content component
         this.props.getSpellingGuess(guess)
