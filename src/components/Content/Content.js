@@ -42,6 +42,7 @@ class Content extends Component {
         })
     }
 
+    //sent to Input component
     getSpellingGuess(result) {
         this.setState({
             guessCorrect: result

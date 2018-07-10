@@ -4,7 +4,6 @@ import Header from "./components/Header"
 import Content from "./components/Content/Content"
 import Footer from "./components/Footer"
 import Loader from "./components/Loader"
-require('dotenv').config()
 
 //**used to override responsive voice api logs
 console.log = function() {}
