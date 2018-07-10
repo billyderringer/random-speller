@@ -54,7 +54,7 @@ html {
     .container-main #container-content #container-speaker #guess-incorrect {
       color: #ff0000; }
   .container-main #container-content #container-options {
-    margin-top: 20px; }
+    margin-top: 40px; }
     .container-main #container-content #container-options input {
       padding: 3px; }
     .container-main #container-content #container-options .submit-button {
