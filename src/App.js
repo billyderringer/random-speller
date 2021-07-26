@@ -22,18 +22,23 @@ class App extends Component {
         this.getNewWord = this.getNewWord.bind(this)
     }
 
-    componentWillMount(){
+    componentDidMount(){
         this.fetchData()
     }
 
     //get random word from words api
     fetchData(){
         axios({
-            method: 'get',
-            url:'https://wordsapiv1.p.mashape.com/words/?random=true&hasDetails=definitions&letterPattern=^\\S*$',
+            method: 'GET',
+            url:'https://wordsapiv1.p.rapidapi.com/words/',
+            params:{
+                "letterPattern":"^\\S*$",
+                "random":"true",
+                "hasDetails":"definitions"
+            },
             headers: {
-                "X-Mashape-Key": process.env.REACT_APP_X_MASHAPE_KEY,
-                "X-Mashape-Host": "wordsapiv1.p.mashape.com"
+                "x-rapidapi-key": process.env.REACT_APP_X_MASHAPE_KEY,
+                "x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
             }
         }).then((res) => {
             //only get word with definitions
