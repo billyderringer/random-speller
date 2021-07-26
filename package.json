@@ -2,9 +2,13 @@
   "name": "random-speller",
   "version": "0.1.0",
   "private": true,
-  "homepage": "  https://billyderringer.github.io/random-speller/",
+  "homepage": "https://billyderringer.github.io/random-speller/",
   "dependencies": {
+<<<<<<< HEAD
     "axios": "^0.21.1",
+=======
+    "axios": "^0.18.1",
+>>>>>>> b13c8a1f7073245ddc110dbedcf13cf5de5f9c06
     "react": "^16.4.1",
     "react-dom": "^16.14.0",
     "react-scripts": "1.1.4"
@@ -19,6 +23,6 @@
     "update:packages": "node wipe-dependencies.js && rm -rf node_modules && npm update --save-dev && npm update --save"
   },
   "devDependencies": {
-    "gh-pages": "^1.2.0"
+    "gh-pages": "^3.1.0"
   }
 }
